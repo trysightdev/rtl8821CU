@@ -117,3 +117,25 @@ Use the tool 'iw', please don't use other tools like 'airmon-ng'
 iw dev wlan0 set monitor none
 ```
 
+## Hostapd 5gh sample
+```
+interface=wlan0
+driver=nl80211
+ssid=YOURSSID
+
+hw_mode=a
+ieee80211n=1
+ieee80211h=1
+ieee80211d=1
+country_code=US
+
+channel=36
+vht_oper_centr_freq_seg0_idx=42
+vht_oper_chwidth=2
+ht_capab=[HT40+]
+
+wpa=2
+wpa_passphrase=12345678
+wpa_key_mgmt=WPA-PSK
+rsn_pairwise=CCMP
+```
