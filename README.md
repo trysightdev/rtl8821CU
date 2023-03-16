@@ -6,7 +6,7 @@ Before build this driver make sure `make`, `gcc`, `linux-header`/`kernel-devel`,
 ```
 mkdir -p ~/build
 cd ~/build
-git clone https://github.com/brektrou/rtl8821CU.git
+git clone https://github.com/trysightdev/rtl8821CU.git
 ```
 ## Check the name of the interface
 
