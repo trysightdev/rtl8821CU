@@ -8,6 +8,31 @@ mkdir -p ~/build
 cd ~/build
 git clone https://github.com/trysightdev/rtl8821CU.git
 ```
+
+## Hostapd 5gh sample
+/etc/hostapd/hostapd.conf
+```
+country_code=US
+driver=nl80211
+interface=wlan1
+
+ssid=magnibot
+hw_mode=a
+ieee80211n=1
+ieee80211h=1
+ieee80211d=1
+
+channel=36
+vht_oper_centr_freq_seg0_idx=42
+vht_oper_chwidth=2
+ht_capab=[HT40+]
+
+macaddr_acl=0
+auth_algs=1
+ignore_broadcast_ssid=0
+```
+
+
 ## Check the name of the interface
 
 Check the interface name of your wifi adapter using `ifconfig`. Usually, it will be wlan0 by default, but it may vary depends on the kernel and your device. On Ubuntu, for example, it may be named as wlx + MAC address. (https://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/) 
@@ -115,27 +140,4 @@ sudo dkms status
 Use the tool 'iw', please don't use other tools like 'airmon-ng'
 ```
 iw dev wlan0 set monitor none
-```
-
-## Hostapd 5gh sample
-```
-interface=wlan0
-driver=nl80211
-ssid=YOURSSID
-
-hw_mode=a
-ieee80211n=1
-ieee80211h=1
-ieee80211d=1
-country_code=US
-
-channel=36
-vht_oper_centr_freq_seg0_idx=42
-vht_oper_chwidth=2
-ht_capab=[HT40+]
-
-wpa=2
-wpa_passphrase=12345678
-wpa_key_mgmt=WPA-PSK
-rsn_pairwise=CCMP
 ```
