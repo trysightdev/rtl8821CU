@@ -4,9 +4,11 @@ Before build this driver make sure `make`, `gcc`, `linux-header`/`kernel-devel`,
 
 ## First, clone this repository
 ```
-mkdir -p ~/build
-cd ~/build
 git clone https://github.com/trysightdev/rtl8821CU.git
+cd rtl8821CU
+make clean
+make -j4
+sudo make install
 ```
 
 ## Hostapd 5gh sample
