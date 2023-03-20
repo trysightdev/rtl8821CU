@@ -4,6 +4,7 @@ Before build this driver make sure `make`, `gcc`, `linux-header`/`kernel-devel`,
 
 ## First, clone this repository
 ```
+sudo apt install -y raspberrypi-kernel-headers build-essential bc dkms git
 git clone https://github.com/trysightdev/rtl8821CU.git
 cd rtl8821CU
 make clean
